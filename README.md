@@ -10,6 +10,7 @@ Allow you to track and share configuration files on multiple machines.
 SDFM will hard link files (only within your home directory) into a storage directory.
 This storage is designed to work with git so you can version your configuration
 files and share them between machines.
+When you change your configuration file the changes will be reflected in the storage too.
 
 ### Installation
 
@@ -46,5 +47,9 @@ You can track your storage with anything you want, but here is an example on how
 
 
 ### Features
+![image](https://user-images.githubusercontent.com/14966516/118294715-4ac20980-b4db-11eb-8998-99ad20555da4.png)
+![image](https://user-images.githubusercontent.com/14966516/118295264-f0757880-b4db-11eb-837e-782a0ac3fd30.png)
+
+---
 
 [License](LICENSE)
