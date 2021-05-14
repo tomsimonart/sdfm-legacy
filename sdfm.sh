@@ -143,7 +143,7 @@ if [[ $# -ge 1 ]]; then
             command="add"
             add_flag=1
             ;;
-        "rm")
+        "rm" | "remove")
             command="rm_"
             rm_flag=1
             ;;
@@ -159,7 +159,7 @@ if [[ $# -ge 1 ]]; then
             command="diff_"
             diff_flag=1
             ;;
-        "list")
+        "list" | "ls")
             find "$STORAGE" ! -type f -exec ls -Ahi {} \;
             exit 0
             ;;
