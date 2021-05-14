@@ -249,7 +249,7 @@ rm_() {
 
 clean_storage() {
     # Remove all empty directories from the storage
-    find "$STORAGE" -mindepth 1 -type d ! -empty -delete
+    find "$STORAGE" -mindepth 1 -type d -empty -delete
 }
 
 install() {
