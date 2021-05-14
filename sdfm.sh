@@ -160,7 +160,7 @@ if [[ $# -ge 1 ]]; then
             diff_flag=1
             ;;
         "list" | "ls")
-            find "$STORAGE" ! -type f -exec ls -Ahi {} \;
+            find "$STORAGE" -type f -exec ls -Ahi {} \;
             exit 0
             ;;
         "shell")
