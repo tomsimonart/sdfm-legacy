@@ -243,7 +243,7 @@ rm_() {
         # but at the same time it's good practice
         rm --preserve-root "$STORAGE/$path"
     else
-        warn "Skipping: path not found in storage: $1"
+        warn "Skipping: path not in home directory: $1"
     fi
 }
 
@@ -258,8 +258,11 @@ install() {
         local path
         path=$(get_path "$1" "$STORAGE")
         if [[ -f "$STORAGE/$path" ]]; then
+            success "Installing: $path"
             mkdir -p "$HOME_DIR/$(dirname "$path")"
             ln --backup=numbered "$STORAGE/$path" "$HOME_DIR/$path"
+        else
+            warn "Skipping: path not in storage: $1"
         fi
     }
     if [[ $# -eq 0 ]]; then
